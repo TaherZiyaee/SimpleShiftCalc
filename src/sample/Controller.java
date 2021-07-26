@@ -1,9 +1,11 @@
 package sample;
 
-import com.ghasemkiani.util.icu.PersianDateFormat;
-import com.ibm.icu.text.DateFormat;
-import com.ibm.icu.text.DateFormatSymbols;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
 
 import java.net.URL;
 import java.util.Arrays;
@@ -12,8 +14,13 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
 
-    public static void definePersianMonths() {
-        String[] months = {
+    @FXML
+    public ComboBox<String> comboMonth;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+        String[] persianMonths = {
                 "فروردین",
                 "اردیبهشت",
                 "خرداد",
@@ -25,17 +32,12 @@ public class Controller implements Initializable {
                 "آذر",
                 "دی",
                 "بهمن",
-                "اسفند"};
+                "اسفند"
+        };
+        ObservableList<String> months = FXCollections.observableArrayList(persianMonths);
 
-        for (String month :
-                months) {
-            System.out.println(month);
-        }
-    }
-
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+        comboMonth.setItems(months);
+        comboMonth.setValue(persianMonths[0]);
 
     }
 }

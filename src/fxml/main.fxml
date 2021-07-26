@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -11,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <VBox fx:id="myLabels" alignment="TOP_RIGHT" layoutX="444.0" layoutY="86.0" prefHeight="560.0" prefWidth="250.0" spacing="20.0" style="-fx-background-color: #8B85B6;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
@@ -41,7 +47,7 @@
          </padding></HBox>
       <VBox fx:id="myComponents" alignment="TOP_RIGHT" layoutX="400.0" layoutY="100.0" prefHeight="560.0" prefWidth="250.0" spacing="10.0" style="-fx-background-color: #8B85B6;">
          <children>
-            <ComboBox prefWidth="150.0" />
+            <ComboBox fx:id="comboMonth" prefWidth="150.0" />
             <TextField maxWidth="-Infinity" prefHeight="31.0" prefWidth="150.0" />
             <TextField layoutX="90.0" layoutY="71.0" maxWidth="-Infinity" prefHeight="31.0" prefWidth="150.0" />
             <TextField layoutX="90.0" layoutY="112.0" maxWidth="-Infinity" prefHeight="31.0" prefWidth="150.0" />
